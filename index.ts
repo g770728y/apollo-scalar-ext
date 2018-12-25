@@ -5,13 +5,18 @@ function identity<T = any>(value: T): T {
   return value;
 }
 
+function isDate(d: any): boolean {
+  return !!(d && d.constructor && d.constructor === 'Date');
+}
+
 function _parseValue(value: any): any {
   if (
     typeof value === 'string' ||
     typeof value === 'number' ||
     typeof value === 'boolean' ||
     value === null ||
-    value === undefined
+    value === undefined ||
+    isDate(value)
   ) {
     return value;
   }

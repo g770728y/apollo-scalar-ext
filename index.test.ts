@@ -34,3 +34,7 @@ test('xxId将转化为ObjectId', () => {
   );
   expect(parseValue({ xx_id: _id }).xx_id.constructor.name).toBe('String');
 });
+
+test('日期原样返回,用于支持测试', () => {
+  expect(parseValue({ d: new Date() }).d.constructor.name).toBe('Date');
+});
