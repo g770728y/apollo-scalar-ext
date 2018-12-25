@@ -59,8 +59,8 @@ function parseLiteral(ast: any, variables: any): any {
 }
 
 const GraphqlMongoWhere = new GraphQLScalarType({
-  name: 'MONGO_WHERE',
-  description: "Then `MONGO_WHERE` scalar type reprents mongo's where clause",
+  name: 'WHERE',
+  description: "Then `WHERE` scalar type reprents mongo's where clause",
   serialize: identity,
   parseValue,
   parseLiteral

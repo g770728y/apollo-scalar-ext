@@ -1,13 +1,12 @@
 {
   "name": "apollo-scalar-ext",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "apollo scalar extensions.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "author": "g770728y",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc -w",
-    "publish": "tsc && npm publish"
+    "dev": "tsc -w"
   },
   "devDependencies": {
     "@types/bson": "^1.0.11",
@@ -20,7 +19,6 @@
     "typescript": "^3.2.2"
   },
   "files": [
-    "./dist/index.d.ts",
-    "./dist/index.js"
+    "dist"
   ]
 }
