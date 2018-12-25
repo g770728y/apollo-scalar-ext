@@ -5,12 +5,16 @@ var bson_1 = require("bson");
 function identity(value) {
     return value;
 }
+function isDate(d) {
+    return !!(d && d.constructor && d.constructor.name === 'Date');
+}
 function _parseValue(value) {
     if (typeof value === 'string' ||
         typeof value === 'number' ||
         typeof value === 'boolean' ||
         value === null ||
-        value === undefined) {
+        value === undefined ||
+        isDate(value)) {
         return value;
     }
     if (Array.isArray(value)) {

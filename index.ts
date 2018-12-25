@@ -6,7 +6,7 @@ function identity<T = any>(value: T): T {
 }
 
 function isDate(d: any): boolean {
-  return !!(d && d.constructor && d.constructor === 'Date');
+  return !!(d && d.constructor && d.constructor.name === 'Date');
 }
 
 function _parseValue(value: any): any {

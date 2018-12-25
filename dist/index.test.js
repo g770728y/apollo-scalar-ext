@@ -25,3 +25,6 @@ test('xxId将转化为ObjectId', function () {
     expect(_1.parseValue({ xx_yy_3_4Id: _id }).xx_yy_3_4Id.constructor.name).toBe('ObjectId');
     expect(_1.parseValue({ xx_id: _id }).xx_id.constructor.name).toBe('String');
 });
+test('日期原样返回,用于支持测试', function () {
+    expect(_1.parseValue({ d: new Date() }).d.constructor.name).toBe('Date');
+});
